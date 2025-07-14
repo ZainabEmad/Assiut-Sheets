@@ -100,7 +100,7 @@
     $X = (int)$input;
     echo (($X / 1000) % 2 == 0 ? "EVEN" : "ODD");
 // Q. Coordinates of a Point:
-    /* 
+    
     $input = trim(fgets(STDIN));
     sscanf($input,"%f %f", $X, $Y);
     echo ($X==0 && $Y ==0 ? 'Origem' :
@@ -111,21 +111,21 @@
          ($X < 0 && $Y < 0 ? 'Q3' :
           'Q4')))))
          );
-    */
+    
 
 // R. Age in Days:
-   /* 
+   
    $N = intval(trim(fgets(STDIN)));
     $years = floor($N / 365);
     $remaning_val = $N % 365;
     $months = floor($remaning_val / 30);
     $days = $remaning_val % 30;
     echo "$years years\n$months months\n$days days";
-    */
+    
 
 
 // S. Interval
-    /* 
+    
     $X = floatval(trim(fgets(STDIN)));
     echo ($X >=0 && $X <= 25 ? "Interval [0,25]":
          ($X > 25 && $X <= 50 ? "Interval (25,50]":
@@ -133,10 +133,10 @@
          ($X > 75 && $X <= 100 ? "Interval (75,100]": 
         "Out of Intervals")))
          );
-    */
+    
 
 // T. Sort Numbers:
-    /*
+    
     $input = trim(fgets(STDIN));
     sscanf($input, "%i %i %i", $A, $B, $C);
     echo ($A >= $B && $A >= $C && $B <= $A && $B >= $C ? "$C\n$B\n$A\n\n$A\n$B\n$C" :  //CBA
@@ -145,18 +145,18 @@
          ($A >= $B && $A >=$C && $C <= $A && $C >= $B ? "$B\n$C\n$A\n\n$A\n$B\n$C":    //BCA
          ($B >= $A && $B >=$C && $C >= $A && $A <= $B ? "$A\n$C\n$B\n\n$A\n$B\n$C":    //ACB
          "$B\n$A\n$C\n\n$A\n$B\n$C")))));  //BAC
-    */
+    
 
 // U. Float or int:
-    /*
+    
     $N = floatval(trim(fgets(STDIN)));
     echo (floor($N) == $N ? "int " . floor($N) :
          ($N != floor($N) ? "float " . floor($N) ." ". number_format($N-floor($N),3,'.'," "):                                            
          "Not"));
-         */
+         
 
 // V. Comparison:
- /*
+ 
     $input = trim(fgets(STDIN));
     sscanf($input, "%i %c %f", $A,$S,$B);
     echo ($A > $B && $A>0 && $B>0 && $S == ">" ? "Right":
@@ -167,10 +167,10 @@
          ($A < $B && $A<0 && $B>0 && $S == "<" ? "Right" :
          ($A == $B && $S == "=" ? "Right":
           "Wrong")))))));
- */
+ 
 
 //  W. Mathematical Expression:
-  /*
+  
     $input = trim(fgets(STDIN));
     sscanf($input, "%i %c %i  %c %i", $A, $S, $B, $Q, $C);
     if(($S == "+" && $A + $B == $C) ||
@@ -187,10 +187,10 @@
         else if ($S == "*" && $A * $B <> $C){
         echo $C = $A * $B;
        }
-  */
+  
 
 //   X. Two intervals:
-    /*
+    
     $input = trim(fgets(STDIN));
     sscanf($input, "%i %i %i %i", $l1, $r1, $l2, $r2);
     if (max($l1, $l2) <= min($r1, $r2)) {
@@ -198,10 +198,10 @@
     }else {
         echo "-1";
     }
-    */
+    
 
     // Y. The last 2 digits:
-    /*
+    
     $input = trim(fgets(STDIN));
     sscanf($input, "%d %d %d %d", $A, $B, $C, $D);
         if($A >= 2 && $B >= 2 && $C >= 2 && $D >= 2){
@@ -212,7 +212,7 @@
         }else{
         echo "Values Must Be Greater Than Of 2";
         }
-    */
+    
 
     // Z. Hard Compare:
     
