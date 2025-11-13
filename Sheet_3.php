@@ -1,4 +1,5 @@
 <?php
+/*
 //A. Summation:
     $N = trim(fgets(STDIN));
     $number_line = trim(fgets(STDIN));
@@ -401,7 +402,7 @@
     }
     echo $abs_difference;
 
-
+*/
 
 
 // Is B a subsequence of A ?:
@@ -419,7 +420,7 @@
         exit;
     }
     foreach($numbers as $number){
-        if($number > $M){
+        if($number < 0 || $number > $M){
             exit;
         }
     }
@@ -430,9 +431,7 @@
        
     }
     for($i = 1; $i <= $M; $i++){
-        if($freq[$i] > 0){
         echo $freq[$i]."\n";
         }
-    }
 
 ?>
