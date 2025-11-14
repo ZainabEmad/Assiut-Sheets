@@ -1,5 +1,5 @@
 <?php
-/*
+
 //A. Summation:
     $N = trim(fgets(STDIN));
     $number_line = trim(fgets(STDIN));
@@ -15,7 +15,6 @@
         $sum = -$sum;
     }
     echo $sum;
-
 
 
 //B. Searching:
@@ -112,7 +111,6 @@
     }
 
 
-
 //G. Palindrome Array:
     $N = (int)trim(fgets(STDIN));
     $numbers_line = trim(fgets(STDIN));
@@ -137,7 +135,6 @@
      echo $Is_Palindrome ? "YES" : "NO";
 
 
-
 //H. Sorting:
 //Bubble Sort Algorithm
     $N = trim(fgets(STDIN));
@@ -156,7 +153,6 @@
         }
     }
     echo implode(" ", $numbers);
-
 
 
 // I. Smallest Pair:
@@ -230,9 +226,7 @@
     echo $sum;
 
 
-
-//L. Max Subarray:
-
+//L. Max Subarray?
 
 
 
@@ -268,10 +262,7 @@
     echo implode(" ", $numbers);
 
 
-
-// N.Check Code:
-
-
+// N.Check Code?
 
 
 //O. Fibonacci:
@@ -286,7 +277,6 @@
         }
     }
     echo  $fib_array[$N - 1];
-
 
 
 //P. Minimize Number:
@@ -315,7 +305,6 @@
         }
     
     echo $counter;
-
 
 
 //R. Permutation with arrays:
@@ -349,7 +338,6 @@
     }
 
 
-
 //S. Search In Matrix:
     $input = trim(fgets(STDIN));
     sscanf($input,"%d %d", $N, $M);
@@ -374,7 +362,6 @@
     else{
         echo "will take number";
     }
-
 
 
 //T. Matrix:
@@ -402,16 +389,12 @@
     }
     echo $abs_difference;
 
-*/
 
-
-// Is B a subsequence of A ?:
-
+// Is B a subsequence of A ?: ?
 
 
 
 //V. Frequency Array:
-
     $input = trim(fgets(STDIN));
     sscanf($input, "%d %d", $N, $M);
     $input_line = trim(fgets(STDIN));
@@ -433,5 +416,28 @@
     for($i = 1; $i <= $M; $i++){
         echo $freq[$i]."\n";
         }
+
+        
+//W. Mirror Array:
+    $input = trim(fgets(STDIN));
+    sscanf($input, "%d %d", $N, $M);
+    $numbers = [];
+    $original = $numbers;
+    for($i = 0; $i < $N; $i++){
+        $line = trim(fgets(STDIN));
+        $row = array_map("intval", explode(" ", $line));
+        $numbers[] = $row;
+    }
+    $rev = '';
+    for ($i = 0; $i < $N; $i++) {
+        for($j = $M - 1; $j >= 0; $j--){
+            $rev .= $numbers[$i][$j];
+            if($j > 0){
+                $rev .= ' ';
+            }
+        }
+        $rev .= "\n";
+    }
+    echo $rev;
 
 ?>
