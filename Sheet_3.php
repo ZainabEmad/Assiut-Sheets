@@ -1,5 +1,4 @@
 <?php
-/*
 //A. Summation:
     $N = trim(fgets(STDIN));
     $number_line = trim(fgets(STDIN));
@@ -439,7 +438,7 @@
         $rev .= "\n";
     }
     echo $rev;
-*/
+
 
 
 //X. 8 Neighbors:
