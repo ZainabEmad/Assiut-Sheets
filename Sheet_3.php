@@ -1,5 +1,5 @@
 <?php
-
+/*
 //A. Summation:
     $N = trim(fgets(STDIN));
     $number_line = trim(fgets(STDIN));
@@ -439,5 +439,43 @@
         $rev .= "\n";
     }
     echo $rev;
+*/
+
+
+//X. 8 Neighbors:
+    $input = trim(fgets(STDIN));
+    sscanf($input, "%d %d", $N, $M);
+    $numbers = [];
+    for($i = 0; $i < $N; $i++){
+        $line = trim(fgets(STDIN));
+        $numbers[$i] = str_split($line);
+    }
+    $position = trim(fgets(STDIN));
+    sscanf($position, "%d %d", $X, $Y);
+    $X--;
+    $Y--;
+
+    $directions = [
+        [-1,-1], [-1,0], [-1,1],
+        [0,-1],           [0,1],
+        [1,-1], [1,0], [1,1]
+    ];
+    $all_x = true;
+    foreach($directions as $d){
+        $nx = $X + $d[0];
+        $ny = $Y + $d[1];
+
+        if($nx > 0 && $nx < $N && $ny > 0 && $ny < $M){
+            if($numbers[$nx][$ny] == "."){
+                $all_x = false;
+                break;
+            }
+        }
+    }
+    if($all_x){
+        echo "yes";
+    }else{
+        echo "no";
+    }
 
 ?>
